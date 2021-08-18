@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke" parallel="false">
+    <listeners>
+        <listener class-name="com.sogeti.selenium.utilities.CustomReport"/>
+    </listeners>
+    <parameter name="grid" value="local"/>
+    <parameter name="platform" value="WINDOWS"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="url" value=""/>
+    <parameter name="wait" value="40"/>
+    <parameter name="logging" value="info"/>
+    <parameter name="driverType" value="browser"/>
+    <parameter name="highlight" value="false"/>
+    <parameter name="captureScreens" value="false"/>
+    <parameter name="dataDriven" value="false"/>
+    <test name="Regression" parallel="false" thread-count="999">
+        <groups>
+            <run>
+
+            </run>
+        </groups>
+        <packages>
+            <package name="com.sogeti.selenium.tests"></package>
+        </packages>
+    </test>
+</suite>
